@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Messenger-style colors -->
+    <color name="messenger_blue">#0084FF</color>
+    <color name="messenger_gray">#E4E6EB</color>
+    <color name="chat_background">#F0F2F5</color>
+    <color name="input_background">#FFFFFF</color>
+    <color name="text_primary">#050505</color>
+    <color name="text_secondary">#65676B</color>
 </resources>

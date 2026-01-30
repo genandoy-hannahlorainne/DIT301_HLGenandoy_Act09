@@ -43,15 +43,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnRegister.setOnClickListener {
-            val email = binding.etEmail.text.toString().trim()
-            val password = binding.etPassword.text.toString().trim()
-
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            registerUser(email, password)
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
         binding.btnAnonymous.setOnClickListener {
@@ -69,20 +62,6 @@ class LoginActivity : AppCompatActivity() {
                     navigateToChat()
                 } else {
                     showErrorDialog("Login Failed", task.exception?.message ?: "Unknown error occurred")
-                }
-            }
-    }
-
-    private fun registerUser(email: String, password: String) {
-        binding.btnRegister.isEnabled = false
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                binding.btnRegister.isEnabled = true
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show()
-                    navigateToChat()
-                } else {
-                    showErrorDialog("Registration Failed", task.exception?.message ?: "Unknown error occurred")
                 }
             }
     }
