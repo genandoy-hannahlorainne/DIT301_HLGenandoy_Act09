@@ -75,31 +75,6 @@ This is a **production-ready real-time chat application** built for Android that
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-### Login Screen
-*Authentication interface with Email/Password and Guest login options*
-
-<img src="CloudFirebaseIntegrationForMobileApps/act9/landing_page.jpg" alt="Login Screen" width="300"/>
-
----
-
-### Chat Interface
-*Real-time messaging with sender info and timestamps*
-
-<img src="CloudFirebaseIntegrationForMobileApps/act9/chats.jpg" alt="Chat Screen" width="300"/>
-
----
-
-### Firestore Console
-*Backend database showing stored messages in real-time*
-
-<img src="CloudFirebaseIntegrationForMobileApps/act9/firestore_console.png" alt="Firestore Console" width="700"/>
-
----
-
 ### Login Error Handling
 *User-friendly error messages for authentication issues*
 
