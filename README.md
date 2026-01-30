@@ -225,7 +225,7 @@ The authentication interface with three options:
 - REGISTER button (for new users)
 - Continue as Guest button (anonymous access)
 
-![Login Screen](screenshots/landing-page.jpg)
+![Login Screen](act9/landing_page.jpg)
 
 ### Chat Screen
 Real-time messaging interface:
@@ -235,7 +235,7 @@ Real-time messaging interface:
 - Send button to post messages
 - Menu with logout option
 
-![Chat Screen](screenshots/messages.jpg)
+![Chat Screen](act9/chats.jpg)
 
 ### Firebase Console - Firestore Database
 Backend data storage showing:
@@ -243,7 +243,7 @@ Backend data storage showing:
 - Each document contains: sender, message, timestamp
 - Real-time updates as messages are sent
 
-![Firestore Console](screenshots/firestore_console.png)
+![Firestore Console](act9/firestore_console.png)
 
 ## 📁 Project Structure
 
