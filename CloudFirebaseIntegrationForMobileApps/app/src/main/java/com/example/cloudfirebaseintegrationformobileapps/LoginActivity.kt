@@ -3,6 +3,7 @@ package com.example.cloudfirebaseintegrationformobileapps
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cloudfirebaseintegrationformobileapps.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -67,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
                     navigateToChat()
                 } else {
-                    Toast.makeText(this, "Login failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                    showErrorDialog("Login Failed", task.exception?.message ?: "Unknown error occurred")
                 }
             }
     }
@@ -81,7 +82,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show()
                     navigateToChat()
                 } else {
-                    Toast.makeText(this, "Registration failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                    showErrorDialog("Registration Failed", task.exception?.message ?: "Unknown error occurred")
                 }
             }
     }
@@ -92,12 +93,23 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 binding.btnAnonymous.isEnabled = true
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "Logged in anonymously!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Logged in as guest!", Toast.LENGTH_SHORT).show()
                     navigateToChat()
                 } else {
-                    Toast.makeText(this, "Anonymous login failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                    showErrorDialog("Guest Login Failed", task.exception?.message ?: "This operation is restricted to administrators only.")
                 }
             }
+    }
+
+    private fun showErrorDialog(title: String, message: String) {
+        AlertDialog.Builder(this)
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveButton("OK") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setCancelable(true)
+            .show()
     }
 
     private fun navigateToChat() {
