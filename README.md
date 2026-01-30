@@ -1,4 +1,4 @@
-# 🔥 Firebase Chat Application
+# 🔥 Real-Time Chat Application
 
 <div align="center">
 
@@ -6,7 +6,7 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
 [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/)
 
-**A fully functional real-time chat application demonstrating modern Android development with Firebase integration**
+**A fully functional real-time messaging app with Firebase authentication, cloud database, and instant message synchronization**
 
 [Features](#-features) • [Screenshots](#-screenshots) • [Setup](#-quick-setup) • [Documentation](#-documentation) • [Usage](#-how-to-use)
 
